@@ -48,7 +48,7 @@ class Zip:
 
 
 class Desk:
-    nom_fichier = "opowwebdesk.7z"
+    nom_fichier = "noethyswebdesk.7z"
     repertoire = "desk"
     rep_destination = None
 
