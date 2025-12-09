@@ -1,0 +1,37 @@
+{% load static %}
+{% load embed %}
+
+
+{# Modal lecture vidéo #}
+<div class="modal fade" id="modal_video_{{ id }}" tabindex="-1" role="dialog" aria-labelledby="modal_video_{{ id }}" aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="" id="video_{{ id }}" allow="autoplay"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        var $videoSrc_{{ id }};
+
+        $("#bouton_video_{{ id }}").click(function() {
+            $videoSrc_{{ id }} = $(this).data("src");
+        });
+
+        $("#modal_video_{{ id }}").on("shown.bs.modal", function(e) {
+            $("#video_{{ id }}").attr("src", $videoSrc_{{ id }} + "?autoplay=1&amp;showinfo=0");
+        });
+
+        $("#modal_video_{{ id }}").on("hide.bs.modal", function(e) {
+            $("#video_{{ id }}").attr("src", "");
+        });
+    });
+</script>

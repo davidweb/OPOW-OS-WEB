@@ -1,0 +1,58 @@
+{% extends "core/base_login.html" %}
+{% load static %}
+
+{% block titre_contenu %}
+    Connexion
+{% endblock titre_contenu %}
+
+{% block contenu_page %}
+
+    <form name="LoginForm" method="post">
+        {% csrf_token %}
+
+        {% if form.errors %}
+            {% for error in form.non_field_errors %}
+                <div class="alert alert-danger">
+                    <strong>{{ error|escape }}</strong>
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        <div class="form-group has-feedback input-group ligne">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <i class="fa fa-fw fa-user"></i>
+                </span>
+            </div>
+            {{ form.username }}
+        </div>
+
+        <div class="form-group has-feedback input-group ligne">
+            <div class="input-group-prepend">
+                <span class="input-group-text">
+                    <i class="fa fa-fw fa-lock"></i>
+                </span>
+            </div>
+            {{ form.password }}
+            <div class="input-group-append">
+                <span class="input-group-text">
+                    <a id="id_afficher_mdp" href="" title="Afficher ou masquer le mot de passe"><i id="id_eye" class="fa fa-fw fa-eye-slash" aria-hidden="true"></i></a>
+                </span>
+            </div>
+        </div>
+
+        {% if form.captcha.errors %}
+            <div class="alert alert-danger">
+                Vous devez recopier le code de sécurité ci-dessous
+            </div>
+        {% endif %}
+
+        <div class="ligne">
+            {{ form.captcha }}
+        </div>
+
+        <button name="login" id="login" class="btn btn-block btn-primary login-btn mb-4" type="submit">Se connecter</button>
+
+    </form>
+
+{% endblock contenu_page %}
