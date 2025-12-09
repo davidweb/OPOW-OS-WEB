@@ -1,5 +1,5 @@
 {
-  "name": "noethysweb",
+  "name": "OPOW-WEB",
   "private": true,
   "dependencies": {
     "jquery": ">=3.7.1",
