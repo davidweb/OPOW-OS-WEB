@@ -1,6 +1,6 @@
 OPOW-WEB
 ==================
-OPOW-WEB est la version fullweb de Noethys, le logiciel de gestion libre et gratuit de gestion multi-activités pour
+OPOW-WEB est la version fullweb de Noethys, le logiciel de gestion multi-activités pour
 les accueils de loisirs, crèches, garderies périscolaires, cantines, TAP ou NAP, clubs sportifs et culturels...
 
 ###### Actuellement en test : Soyez vigilants lors d'une utilisation en production.
