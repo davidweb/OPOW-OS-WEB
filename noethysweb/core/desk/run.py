@@ -55,7 +55,7 @@ class App:
         f.close()
 
     def Download_Noethysweb(self):
-        print("Téléchargement de Noethysweb...")
+        print("Téléchargement de OPOW-WEB...")
         import requests
         # Lecture du numéro de version online
         try:
@@ -67,7 +67,7 @@ class App:
         pos_debut_numVersion = changelog.find("n")
         pos_fin_numVersion = changelog.find("(")
         version_online_txt = changelog[pos_debut_numVersion + 1:pos_fin_numVersion].strip()
-        print("version disponible de Noethysweb =" + version_online_txt)
+        print("version disponible de OPOW-WEB =" + version_online_txt)
 
         # Téléchargement du zip
         nom_fichier = "Noethysweb-%s.zip" % version_online_txt
@@ -76,7 +76,7 @@ class App:
             print("Téléchargement de la version %s..." % version_online_txt)
             urlretrieve("https://github.com/Noethys/Noethysweb/archive/%s.zip" % version_online_txt, chemin_fichier_zip)
         except Exception as err:
-            print("Erreur durant le téléchargement de Noethysweb")
+            print("Erreur durant le téléchargement de OPOW-WEB")
             return False
 
         # Dezippage
@@ -85,7 +85,7 @@ class App:
 
         # Suppression du zip
         os.remove(chemin_fichier_zip)
-        print("Installation de Noethysweb ok.")
+        print("Installation de OPOW-WEB ok.")
 
     def Get_chemin_noethysweb(self):
         if self.chemin_noethysweb:
@@ -174,15 +174,15 @@ class App:
         # Menu principal
         print("")
         print("----------------- MENU PRINCIPAL -----------------")
-        print("1 = Lancer Noethysweb")
-        print("2 = Installer Noethysweb")
+        print("1 = Lancer OPOW-WEB")
+        print("2 = Installer OPOW-WEB")
         print("3 = Commandes avancées")
         print("4 = Quitter")
         reponse = int(input("Quelle action choisissez-vous ? "))
 
         if reponse == 1:
             if not self.Get_chemin_noethysweb():
-                print("Erreur : Noethysweb ne semble pas installé.")
+                print("Erreur : OPOW-WEB ne semble pas installé.")
                 self.run_menu_principal()
                 return
             app.Ouvrir_navigateur()
@@ -202,7 +202,7 @@ class App:
     def run_menu_commandes_avancees(self):
         print("")
         print("---------------- COMMANDES AVANCEES ----------------")
-        print("1 = Télécharger et installer Noethysweb")
+        print("1 = Télécharger et installer OPOW-WEB")
         print("2 = Installer les dépendances python")
         print("3 = Installer le fichier de configuration")
         print("4 = Installer les fichiers statiques")
