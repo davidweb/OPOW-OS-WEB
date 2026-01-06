@@ -58,7 +58,7 @@ if settings.DEBUG:
 
 # Modifie les noms dans l'admin
 admin.site.site_header = "Administration de Noethysweb"
-admin.site.index_title = "Noethysweb"
+admin.site.index_title = "Opow-Oran"
 admin.site.site_title = "Administration"
 
 # Personnalisation des pages d'erreur

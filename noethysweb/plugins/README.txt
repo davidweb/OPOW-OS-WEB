@@ -1,5 +1,5 @@
 ==========================================
-Créer et intégrer votre plugin OPOW-WEB
+Créer et intégrer votre plugin Noethysweb
 ==========================================
 
 --- CREER LE NOUVEAU PLUGIN ---
@@ -8,7 +8,7 @@ Créer et intégrer votre plugin OPOW-WEB
 2. Donnez à votre nouveau répertoire un nom en minuscules sans espaces. Exemple : monpluginperso.
 3. Changez le nom du répertoire templates/exemple en templates/monpluginperso
 
---- CONNECTER LE PLUGIN A OPOW-WEB ---
+--- CONNECTER LE PLUGIN A NOETHYSWEB ---
 
 4. Ouvrez le fichier noethysweb\settings_production.py et ajoutez la ligne suivante : PLUGINS = ["monpluginperso"]
 Si vous avez plusieurs plugins, ajoutez une liste du type : PLUGINS = ["monpluginperso", "monplugin2", "monplugin3"]
@@ -25,7 +25,7 @@ Si vous avez plusieurs plugins, ajoutez une liste du type : PLUGINS = ["monplugi
 
 Pour vous aider à coder votre plugin :
 - Retrouvez la documentation en français du framework Django sur le site officiel : www.djangoproject.com
-- Parcourez les répertoires des modules existants : locations, cotisations, etc... pour vous inspirer des fonctionnalités officielles de OPOW-WEB.
+- Parcourez les répertoires des modules existants : locations, cotisations, etc... pour vous inspirer des fonctionnalités officielles de Noethysweb.
 
 --- FINALISATION ---
 
