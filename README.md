@@ -1,7 +1,9 @@
-OPOW-WEB
+Noethysweb
 ==================
-OPOW-WEB est la version fullweb de Noethys, le logiciel de gestion multi-activités pour
+Noethysweb est la version fullweb de Noethys, le logiciel de gestion libre et gratuit de gestion multi-activités pour 
 les accueils de loisirs, crèches, garderies périscolaires, cantines, TAP ou NAP, clubs sportifs et culturels...
+
+Plus d'infos sur www.noethys.com
 
 ###### Actuellement en test : Soyez vigilants lors d'une utilisation en production.
 
@@ -21,7 +23,7 @@ Installation
     - `python3 manage.py update_permissions`
 - Si vous souhaitez commencer avec une base de données vide :
     - `python3 manage.py import_defaut`
-- Ou si vous souhaitez importer la base de données d'un fichier Noethys - où xxx est le nom du fichier d'export créé depuis la fonction "Exporter vers OPOW-WEB" du menu Fichier de Noethys, et motdepasse est le mot de passe saisi lors de la génération de l'export :
+- Ou si vous souhaitez importer la base de données d'un fichier Noethys - où xxx est le nom du fichier d'export créé depuis la fonction "Exporter vers Noethysweb" du menu Fichier de Noethys, et motdepasse est le mot de passe saisi lors de la génération de l'export :
     - `python3 manage.py import_fichier xxx.nweb motdepasse`
 - Lancez enfin le serveur intégré (Uniquement pour des tests) :
     - `python3 manage.py runserver`

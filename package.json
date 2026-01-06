@@ -1,9 +1,9 @@
 {
-  "name": "OPOW-WEB",
+  "name": "noethysweb",
   "private": true,
   "dependencies": {
-    "jquery": ">=3.7.1",
+    "jquery": ">=2.1.1",
     "jqueryui": ">=1.12.1",
-	"fabric": ">=6.9.0"
+	"fabric": ">=4.6.0"
   }
 }
