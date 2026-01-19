@@ -2,7 +2,7 @@
   "name": "OPOW-WEB",
   "private": true,
   "dependencies": {
-    "jquery": ">=3.7.1",
+    "jquery": ">=4.0.0",
     "jqueryui": ">=1.12.1",
 	"fabric": ">=6.9.0"
   }
